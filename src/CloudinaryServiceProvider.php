@@ -22,7 +22,7 @@ class CloudinaryServiceProvider extends PackageServiceProvider
     {
         $this->app['config']['filesystems.disks.cloudinary'] = ['driver' => 'cloudinary'];
 
-        Storage::extend('imagekit', function ($app, $config) {
+        Storage::extend('cloudinary', function ($app, $config) {
             $client = new Cloudinary(config('cloudinary.cloud_url'));
 
             $adapter = new CloudinaryAdapter($client);
