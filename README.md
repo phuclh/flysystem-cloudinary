@@ -43,6 +43,7 @@ Storage::disk('cloudinary')->delete('filename.jpg');
 
 // List all files 
 Storage::disk('cloudinary')->listContents('', false); // listContents($path, $deep)
+```
 
 ## Testing
 
