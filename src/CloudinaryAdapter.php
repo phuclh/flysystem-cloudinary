@@ -32,6 +32,7 @@ class CloudinaryAdapter implements FilesystemAdapter
         if ($path == '/') {
             return $path;
         }
+
         try {
             $resource = $this->getResource(Str::beforeLast($path, '.'));
 
@@ -78,7 +79,7 @@ class CloudinaryAdapter implements FilesystemAdapter
 
         $uploadOptions = [
             'public_id' => $newPublicId,
-            'resource_type' => $resourceType
+            'resource_type' => $resourceType,
         ];
 
         $resourceMetadata = stream_get_meta_data($contents);
